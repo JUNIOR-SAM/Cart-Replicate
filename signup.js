@@ -148,7 +148,7 @@ const signUp = () =>{
       setTimeout(() => {
           sub.innerHTML = 'Sign Up';
         }, 7000);
-        window.location.href = 'Signin.html';
+        window.location.href = 'express.html';
       }
 
     const myUser = JSON.parse(localStorage.getItem('user'));
