@@ -25,7 +25,7 @@ const allUser = []
 const signUp = () =>{
   if(firstName.value === '' || lastName.value === '' || email.value === '' || password.value === '' || confirmPassword.value === ''){
       toast('Please fill all the fields' , 'red', 'white', 'bold', '50px' , '50px')
-      sub.innerHTML = 'wifi-loader'
+      sub.innerHTML = '.......loading'
       setTimeout(() => {
         sub.innerHTML = 'Sign Up'   
       }, 1000)
@@ -148,7 +148,7 @@ const signUp = () =>{
       setTimeout(() => {
           sub.innerHTML = 'Sign Up';
         }, 7000);
-        window.location.href = 'express.html';
+        window.location.href = 'Signin.html'; 
       }
 
     const myUser = JSON.parse(localStorage.getItem('user'));
