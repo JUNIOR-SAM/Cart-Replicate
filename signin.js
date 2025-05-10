@@ -36,7 +36,7 @@ const signIn = () => {
     if (user) {
         toast("Sign in successful!", "green");
         setTimeout(() => {
-            window.location.href = 'index.html'; // Redirect to the next page
+            window.location.href = 'express.html'; // Redirect to the next page
         }, 2000); // Delay redirection for 2 seconds to show the success message
     } else {
         toast("Invalid email or password. Please try again.", "red");
