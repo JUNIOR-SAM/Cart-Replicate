@@ -46,6 +46,45 @@
     .btn:hover{
         width: 55%;
     }
+
+    svg {
+width: 40px;
+ transform-origin: center;
+ animation: rotate4 2s linear infinite;
+ display: none;
+}
+
+circle {
+ fill: none;
+ stroke: white;
+ stroke-width: 5;
+ stroke-dasharray: 1, 200;
+ stroke-dashoffset: 0;
+ stroke-linecap: round;
+ animation: dash4 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate4 {
+ 100% {
+  transform: rotate(360deg);
+ }
+}
+
+@keyframes dash4 {
+ 0% {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+ }
+
+ 50% {
+  stroke-dasharray: 90, 200;
+  stroke-dashoffset: -35px;
+ }
+
+ 100% {
+  stroke-dashoffset: -125px;
+ }
+}
     </style>
 </head>
 <body style="background: linear-gradient(135deg, blue, gold);background-attachment: fixed;; height: 100vh;margin-top: 200px; overflow-y: hidden; ">
@@ -54,7 +93,11 @@
         <span class=" fs-4 text-white ">Signin page</span></div>
         <div class="mt-lg-4 mt-0"><input type="email" placeholder="Enter your email" id="email"  class="mt-lg-3 mt-0 ps-3  rounded-3"></div>
         <div><input type="password" placeholder="Enter your password" id="password"  class="mt-3 ps-3  rounded-3"></div>
-        <button class="btn mt-4 mt-lg-5 mb-lg-3 mb-0 rounded-5 text-white fw-bold border border-black border-2" onclick="signIn()">Sign in</button>
+        <button class="btn mt-4 mt-lg-5 mb-lg-3 mb-0 rounded-5 text-white fw-bold border border-black border-2" onclick="signIn()"><span id="sub">Sign in</span>
+        <svg viewBox="25 25 50 50" id="load">
+        <circle r="20" cy="50" cx="50"></circle>
+        </svg> 
+        </button>
         <div class="mt-3 text-center px-lg-0 px-5 "><p class="fw-bold text-warning" >I have no account before ?<a href="Signup.html" style="text-decoration: none; color: white;font-weight: bold;" class="ps-1"> Sign up</a></p></div>
         <div class="mt-lg-4 mt-0"><a href="index.html" style="text-decoration: none;"  class="fw-bold text-warning "> Back to home </a></div>
     </div>

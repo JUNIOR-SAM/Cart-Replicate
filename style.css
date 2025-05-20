@@ -27,5 +27,17 @@ h5{
     font-family: cursive;
 }
 
+/* .col{
+    width:23%;
+} */
+
+.card1 {
+    background-color:rgba(0, 0, 255, 0.74);
+    padding: 10px;
+    color: white;
+
+}
+
+
 
 

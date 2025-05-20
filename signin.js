@@ -22,22 +22,34 @@ const signIn = () => {
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value.trim();
 
-    if (email === "" || password === "") {
+    if (email === "" || password === "") { 
+      load.style.display = 'block'
+      load.style.margin = 'auto'
+      sub.style.display = 'none'
+      setTimeout(() => {
+        load.style.display = 'none'
+        sub.style.display = 'block';
         toast("Please fill in all fields.", "red");
+    }, 3000);
         return;
     }
 
-    // Retrieve users from local storage
     const allUsers = JSON.parse(localStorage.getItem("user")) || [];
 
-    // Check if the user exists
     const user = allUsers.find((u) => u.email === email && u.password === password);
 
     if (user) {
+      load.style.display = 'block'
+      load.style.margin = 'auto'
+      sub.style.display = 'none'
+      setTimeout(() => {
+        load.style.display = 'none'
+        sub.style.display = 'block';
         toast("Sign in successful!", "green");
+    }, 3000);
         setTimeout(() => {
-            window.location.href = 'express.html'; // Redirect to the next page
-        }, 2000); // Delay redirection for 2 seconds to show the success message
+            window.location.href = 'express.html';
+        }, 3000); 
     } else {
         toast("Invalid email or password. Please try again.", "red");
     }
