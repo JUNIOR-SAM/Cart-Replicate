@@ -30,7 +30,7 @@ const signIn = () => {
         load.style.display = 'none'
         sub.style.display = 'block';
         toast("Please fill in all fields.", "red");
-    }, 3000);
+    }, 2000);
         return;
     }
 
@@ -51,6 +51,13 @@ const signIn = () => {
             window.location.href = 'express.html';
         }, 3000); 
     } else {
+      load.style.display = 'block'
+      load.style.margin = 'auto'
+      sub.style.display = 'none'
+      setTimeout(() => {
+        load.style.display = 'none';
+        sub.style.display = 'block';
         toast("Invalid email or password. Please try again.", "red");
-    }
-};
+    },3000);
+}
+}
